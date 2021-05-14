@@ -14,7 +14,9 @@ const Chat = ({ chat, messages }) => {
             <Head>
                 <title>Chatting with {getRecipientEmail(chat.users,user)}</title>
             </Head>
-            <Sidebar />
+            <WrapperSidebar>
+                <Sidebar />
+            </WrapperSidebar>
             <ChatContainer>
                 <ChatScreen chat={chat} messages={messages} />
             </ChatContainer>
@@ -66,4 +68,10 @@ const ChatContainer = styled.div`
     }
     --ms-overflow-style:none;
     scrollbar-width:none;
+`;
+
+const WrapperSidebar = styled.div`
+         @media (max-width: 768px) {
+        display:none;
+  }
 `;
