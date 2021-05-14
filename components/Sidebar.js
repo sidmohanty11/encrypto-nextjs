@@ -61,7 +61,7 @@ const Container = styled.div`
     flex:0.45;
     border-right: 1px solid #212529;
     height: 100vh;
-    min-width: 300px;
+    /* min-width: 300px; */
     max-width:350px;
     overflow-y:scroll;
     background-color:#0b090a;
@@ -94,7 +94,12 @@ const UserAvatar = styled(Avatar)`
         opacity: 0.8;
     }
 `;
-const IconsContainer = styled.div``;
+const IconsContainer = styled.div`
+
+    @media (max-width: 768px) {
+        display:none;
+  }
+`;
 
 const Search = styled.div`
     display:flex;
@@ -110,12 +115,17 @@ const SearchInput = styled.input`
     flex:1;
     color: whitesmoke;
     background-color:#0b090a;
+     @media (max-width: 768px) {
+        font-size:10px;
+  }
 `;
 
 const SidebarButton = styled(Button)`
     width:100%;
     color:whitesmoke !important;
-
+    @media (max-width: 768px) {
+        font-size:10px !important;
+    }
     &&&{
         border-bottom: 1px solid #212529;
         border-top: 1px solid #212529;
@@ -125,8 +135,6 @@ const SidebarButton = styled(Button)`
 const ChatComponent = styled.div`
     border-bottom: 1px solid #212529;
 `;
-
-
 
 
 

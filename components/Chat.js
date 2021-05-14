@@ -23,7 +23,7 @@ const Chat = ({ id, users }) => {
     return (
         <Container onClick={enterChat}>
             {recipient ? (<UserAvatar src={recipient?.photoURL} />) : (<UserAvatar>{recipientEmail[0]}</UserAvatar>)}
-            <p>{recipientEmail}</p>
+            <EmailHolder>{recipientEmail}</EmailHolder>
         </Container>
     )
 }
@@ -45,4 +45,10 @@ const Container = styled.div`
 const UserAvatar = styled(Avatar)`
     margin:5px;
     margin-right:15px;
+`;
+
+const EmailHolder = styled.div`
+@media (max-width: 768px) {
+        display:none;
+}
 `;

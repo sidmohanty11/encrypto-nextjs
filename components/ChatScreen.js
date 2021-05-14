@@ -152,6 +152,10 @@ const Header = styled.div`
     align-items: center;
     border-bottom:1px solid #212529;
     color: #641220;
+
+     @media (max-width: 768px) {
+        font-size:10px;
+  }
 `;
 
 const HeaderInfo = styled.div`
@@ -168,7 +172,12 @@ const HeaderInfo = styled.div`
     }
 `;
 
-const HeaderIcons = styled.div``;
+const HeaderIcons = styled.div`
+
+    @media (max-width: 768px) {
+        display:none;
+  }
+`;
 
 const MessageContainer = styled.div`
     padding:30px;
