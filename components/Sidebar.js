@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Avatar, IconButton, Button } from '@material-ui/core';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import ChatIcon from '@material-ui/icons/chat';
+import ChatIcon from '@material-ui/icons/Chat';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import SearchIcon from '@material-ui/icons/Search';
 import * as EmailValidator from 'email-validator';
