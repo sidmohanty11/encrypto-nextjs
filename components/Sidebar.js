@@ -73,6 +73,9 @@ const Container = styled.div`
 
     --ms-overflow-style:none;
     scrollbar-width:none;
+     @media (max-width: 768px) {
+        width:100px;
+  }
 `;
 
 const Header = styled.div`
