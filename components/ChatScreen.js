@@ -7,7 +7,7 @@ import { Avatar, IconButton } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import AttacFileIcon from '@material-ui/icons/AttachFile';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon'
-import MicIcon from '@material-ui/icons/Mic';
+import SendIcon from '@material-ui/icons/Send';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import Message from './Message';
 import firebase from 'firebase';
@@ -108,8 +108,7 @@ const ChatScreen = ({chat, messages}) => {
             <InputContainer>
                 <InsertEmoticonIcon />
                 <Input value={input} onChange={e=>setInput(e.target.value)}/>
-                <button hidden disabled={!input} type="submit" onClick={sendMessage}>Send Message</button>
-                <MicIcon />
+                <button disabled={!input} type="submit" onClick={sendMessage}><SendIcon /></button>
             </InputContainer>
         </Container>
     )
@@ -127,6 +126,12 @@ const InputContainer = styled.form`
     bottom:0;
     background-color: #252422;
     z-index: 100;
+    
+    >button{
+        .MuiSvgIcon-root{
+     color: #252422;
+        }
+    }
 `;
 
 
